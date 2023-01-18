@@ -1,0 +1,14 @@
+15/01/2023 19:19:46 1 81.187.135.200 Incoming Connect on Port 8080
+15/01/2023 19:19:47 2 81.187.135.200 Incoming Connect on Port 8080
+15/01/2023 19:21:00 2 81.187.135.200 Incoming Connect on Port 8080
+15/01/2023 19:22:42 2 81.187.135.200 Incoming Connect on Port 8080
+15/01/2023 19:23:33 3 81.187.135.200 Incoming Connect on Port 8011
+15/01/2023 19:23:33 3 81.187.135.200 User=Q1UBS
+15/01/2023 19:23:33 3 81.187.135.200 Password=password
+15/01/2023 19:23:33 3 81.187.135.200 Call Accepted. Callsign=Q1UBS
+15/01/2023 19:28:37 3 Disconnected. Bytes Sent = 579 Bytes Received 14
+15/01/2023 19:30:31 1 81.187.135.200 Incoming Connect on Port 8011
+15/01/2023 19:30:31 1 81.187.135.200 User=Q1UBS
+15/01/2023 19:30:31 1 81.187.135.200 Password=password
+15/01/2023 19:30:31 1 81.187.135.200 Call Accepted. Callsign=Q1UBS
+15/01/2023 19:53:24 1 Disconnected. Bytes Sent = 757 Bytes Received 30

@@ -1,0 +1,27 @@
+230111 02:00:58 |Q7EIV     Incoming Connect from Q7EIV
+230111 02:00:58 >Q7EIV     [BPQChatServer-6.0.23.31]
+230111 02:00:58 >Q7EIV     Please enter your Name>
+230111 02:01:08 ?          topic_join complete user Q7EIV topic General addr 57f272a0 ref 1
+230111 02:01:08 >Q7EIV     Q1UBS's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
+230111 02:01:08 >Q7EIV     1 Station(s) connected:
+230111 02:01:08 >Q7EIV     Q7EIV  at MATCHT    Matthew, ?_qth [General] Idle for 0 seconds
+230111 02:01:20 <Q7EIV     /h
+230111 02:01:20 >Q7EIV     Commands can be in upper or lower case.
+230111 02:01:20 >Q7EIV     /U - Show Users./N - Enter your Name./Q - Enter your QTH./T - Show Topics.
+230111 02:01:20 >Q7EIV     /T Name - Join Topic or Create new Topic. Topic Names are not case sensitive/P - Show Ports and Links.
+230111 02:01:20 >Q7EIV     /A - Toggle Alert on user join - Disabled.
+230111 02:01:20 >Q7EIV     /C - Toggle Colour Mode on or off (only works on Console or BPQTerminal - Disabled.
+230111 02:01:20 >Q7EIV     /Codepage CPnnnn - Set Codepage to use if UTF-8 is disabled.
+230111 02:01:20 >Q7EIV     /E - Toggle Echo - Disabled .
+230111 02:01:20 >Q7EIV     /Keepalive - Toggle sending Keepalive messages every 10 minutes - Disabled.
+230111 02:01:20 >Q7EIV     /ShowNames - Toggle displaying name as well as call on each message - Disabled
+230111 02:01:20 >Q7EIV     /Auto - Toggle Automatic character set selection - Disabled.
+230111 02:01:20 >Q7EIV     /UTF-8 - Character set Selection - UTF-8.
+230111 02:01:20 >Q7EIV     /Time - Toggle displaying timestamp on each message - Disabled.
+230111 02:01:20 >Q7EIV     /S CALL Text - Send Text to that station only.
+230111 02:01:20 >Q7EIV     /F - Force all links to be made./K - Show Known nodes.
+230111 02:01:20 >Q7EIV     /B - Leave Chat and return to node./QUIT - Leave Chat and disconnect from node.
+230111 02:01:20 >Q7EIV     /History nn - Display chat messages received in last nn minutes.
+230111 02:01:46 <Q7EIV     /QUIT
+230111 02:01:47 |Q7EIV     Chat User Q7EIV Disconnected
+230111 02:01:47 ?ÀròW      topic_leave user Q7EIV topic General addr 57f272a0 ref 1
