@@ -1,5 +1,0 @@
-230114 00:08:00 ?          Msg 1 Routing Trace To SYSOP Via 
-230114 00:09:05 !          Mail Starting
-230114 00:22:39 !          Mail Starting
-230114 00:24:10 !          Mail Starting
-230114 00:36:48 !          Mail Starting

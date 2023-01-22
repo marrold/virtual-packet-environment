@@ -14,9 +14,9 @@ services:
     stop_signal: SIGINT
     stop_grace_period: 2m
     ports:
-      - 8010:8010
-      - 8011:8011
-      - 8080:8080
+      - 8110:8010
+      - 8111:8011
+      - 8180:8080
     networks:
       vpe:
         ipv4_address: 10.5.0.10
@@ -31,11 +31,12 @@ services:
     image: marrold/vpe-direwolf:dev
     container_name: Q7EIV-dw
     restart: unless-stopped
+    ports:
+      - 8100:8000
+      - 8101:8001
     networks:
       vpe:
         ipv4_address: 10.5.0.11
-    ports:
-      - 8001:8001
     ipc: host
     devices:
       - /dev/snd
@@ -44,7 +45,6 @@ services:
     environment:
       - ADEVICE=zone_a
       - CALLSIGN=Q7EIV
-      - MODEM=1200
 
   Q1UBS-bpq:
     image: marrold/vpe-bpq-x86_64:dev
@@ -53,9 +53,9 @@ services:
     stop_signal: SIGINT
     stop_grace_period: 2m
     ports:
-      - 8110:8010
-      - 8111:8011
-      - 8180:8080
+      - 8210:8010
+      - 8211:8011
+      - 8280:8080
     networks:
       vpe:
         ipv4_address: 10.5.0.20
@@ -70,6 +70,9 @@ services:
     image: marrold/vpe-direwolf:dev
     container_name: Q1UBS-dw
     restart: unless-stopped
+    ports:
+      - 8200:8000
+      - 8201:8001
     networks:
       vpe:
         ipv4_address: 10.5.0.21
@@ -81,7 +84,6 @@ services:
     environment:
       - ADEVICE=zone_a
       - CALLSIGN=Q1UBS
-      - MODEM=1200
 
   Q3GOS-bpq:
     image: marrold/vpe-bpq-x86_64:dev
@@ -90,9 +92,9 @@ services:
     stop_signal: SIGINT
     stop_grace_period: 2m
     ports:
-      - 8210:8010
-      - 8211:8011
-      - 8280:8080
+      - 8310:8010
+      - 8311:8011
+      - 8380:8080
     networks:
       vpe:
         ipv4_address: 10.5.0.30
@@ -108,6 +110,9 @@ services:
     image: marrold/vpe-direwolf:dev
     container_name: Q3GOS-dw
     restart: unless-stopped
+    ports:
+      - 8300:8000
+      - 8301:8001
     networks:
       vpe:
         ipv4_address: 10.5.0.31
@@ -119,7 +124,6 @@ services:
     environment:
       - ADEVICE=zone_a
       - CALLSIGN=Q3GOS
-      - MODEM=1200
 
   Q3ZXG-bpq:
     image: marrold/vpe-bpq-x86_64:dev
@@ -128,9 +132,9 @@ services:
     stop_signal: SIGINT
     stop_grace_period: 2m
     ports:
-      - 8310:8010
-      - 8311:8011
-      - 8380:8080
+      - 8410:8010
+      - 8411:8011
+      - 8480:8080
     networks:
       vpe:
         ipv4_address: 10.5.0.40
@@ -144,6 +148,9 @@ services:
     image: marrold/vpe-direwolf:dev
     container_name: Q3ZXG-dw
     restart: unless-stopped
+    ports:
+      - 8400:8000
+      - 8401:8001
     networks:
       vpe:
         ipv4_address: 10.5.0.41
@@ -155,7 +162,6 @@ services:
     environment:
       - ADEVICE=zone_a
       - CALLSIGN=Q3GOS
-      - MODEM=1200
 
   Q7LWP-bpq:
     image: marrold/vpe-bpq-x86_64:dev
@@ -164,9 +170,9 @@ services:
     stop_signal: SIGINT
     stop_grace_period: 2m
     ports:
-      - 8410:8010
-      - 8411:8011
-      - 8480:8080
+      - 8510:8010
+      - 8511:8011
+      - 8580:8080
     networks:
       vpe:
         ipv4_address: 10.5.0.50
@@ -180,6 +186,9 @@ services:
     image: marrold/vpe-direwolf:dev
     container_name: Q7LWP-dw
     restart: unless-stopped
+    ports:
+      - 8500:8000
+      - 8501:8001
     networks:
       vpe:
         ipv4_address: 10.5.0.51
@@ -191,5 +200,79 @@ services:
     environment:
       - ADEVICE=zone_a
       - CALLSIGN=Q7LWP
-      - MODEM=1200
 
+  Q7LJK-bpq:
+    image: marrold/vpe-bpq-x86_64:dev
+    container_name: Q7LJK-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8610:8010
+      - 8611:8011
+      - 8680:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.60
+    volumes:
+      - ./Q7LJK/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q7LJK/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q7LJK/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q7LJK/logs:/opt/linbpq/logs
+
+  Q7LJK-dw:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q7LJK-dw
+    restart: unless-stopped
+    ports:
+      - 8600:8000
+      - 8601:8001
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.61
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_a
+      - CALLSIGN=Q7LJK
+
+  Q6XED-bpq:
+    image: marrold/vpe-bpq-x86_64:dev
+    container_name: Q6XED-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8710:8010
+      - 8711:8011
+      - 8780:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.70
+    volumes:
+      - ./Q6XED/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q6XED/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q6XED/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q6XED/logs:/opt/linbpq/logs
+
+  Q6XED-dw:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q6XED-dw
+    restart: unless-stopped
+    ports:
+      - 8700:8000
+      - 8701:8001
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.71
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_a
+      - CALLSIGN=Q6XED

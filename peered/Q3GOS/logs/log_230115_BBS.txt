@@ -1,6 +1,0 @@
-230115 00:00:10 ?          Msg 1 Routing Trace To SYSOP Via 
-230115 00:00:10 ?          Routing Trace Type P TO SYSOP VIA  Route On (null) (null) (null) (null) (null)
-230115 00:00:10 ?          Routing Trace - No Match
-230115 17:56:48 !          Mail Starting
-230115 18:16:53 !          Mail Starting
-230115 23:12:49 !          Mail Starting

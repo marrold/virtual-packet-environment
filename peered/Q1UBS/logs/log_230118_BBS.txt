@@ -1,3 +1,0 @@
-230118 00:00:01 ?          Msg 2 Routing Trace To SYSOP Via 
-230118 00:00:01 ?          Routing Trace Type P TO SYSOP VIA  Route On (null) (null) (null) (null) (null)
-230118 00:00:01 ?          Routing Trace - No Match

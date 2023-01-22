@@ -1,160 +1,0 @@
-230118 22:11:31 |Q7EIV     Incoming Connect from Q7EIV
-230118 22:11:31 >Q7EIV     [BPQChatServer-6.0.23.31]
-230118 22:11:31 >Q7EIV     Please enter your Name>
-230118 22:11:36 ?          topic_join complete user Q7EIV topic General addr 57ff52a0 ref 1
-230118 22:11:36 >Q7EIV     Q7EIV's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
-230118 22:11:36 >Q7EIV     1 Station(s) connected:
-230118 22:11:36 >Q7EIV     Q7EIV  at EIVCHT    Q7EIV, ?_qth [General] Idle for 0 seconds
-230118 22:12:08 |Q1UBS     Incoming Connect from Q1UBS
-230118 22:12:08 >Q1UBS     [BPQChatServer-6.0.23.31]
-230118 22:12:08 >Q1UBS     Please enter your Name>
-230118 22:12:16 >Q1UBS     Q7EIV's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
-230118 22:12:16 >Q7EIV     Q1UBS  : Q1UBS *** Joined Chat, Topic General
-230118 22:12:16 >Q7EIV     
-230118 22:12:16 >Q1UBS     2 Station(s) connected:
-230118 22:12:16 >Q1UBS     Q7EIV  at EIVCHT    Q7EIV, ?_qth [General] Idle for 40 seconds
-230118 22:12:16 >Q1UBS     Q1UBS  at EIVCHT    Q1UBS, ?_qth [General] Idle for 0 seconds
-230118 22:12:16 ?          topic_join complete user Q1UBS topic General addr 57ff52a0 ref 2
-230118 22:12:25 <Q7EIV     Hi
-230118 22:12:25 >Q1UBS     Q7EIV  : Hi
-230118 22:12:45 |Q3GOS     Incoming Connect from Q3GOS
-230118 22:12:45 >Q3GOS     [BPQChatServer-6.0.23.31]
-230118 22:12:45 >Q3GOS     Please enter your Name>
-230118 22:12:51 |Q3ZXG     Incoming Connect from Q3ZXG
-230118 22:12:51 >Q3ZXG     [BPQChatServer-6.0.23.31]
-230118 22:12:51 >Q3ZXG     Please enter your Name>
-230118 22:12:58 |Q7LWP     Incoming Connect from Q7LWP
-230118 22:12:58 >Q7LWP     [BPQChatServer-6.0.23.31]
-230118 22:12:58 >Q7LWP     Please enter your Name>
-230118 22:13:13 >Q7LWP     Q7EIV's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
-230118 22:13:13 >Q7EIV     Q7LWP  : Q7LEP *** Joined Chat, Topic General
-230118 22:13:13 >Q7EIV     
-230118 22:13:13 >Q1UBS     Q7LWP  : Q7LEP *** Joined Chat, Topic General
-230118 22:13:13 >Q1UBS     
-230118 22:13:13 >Q7LWP     3 Station(s) connected:
-230118 22:13:13 >Q7LWP     Q7EIV  at EIVCHT    Q7EIV, ?_qth [General] Idle for 48 seconds
-230118 22:13:13 >Q7LWP     Q7LWP  at EIVCHT    Q7LEP, ?_qth [General] Idle for 0 seconds
-230118 22:13:13 >Q7LWP     Q1UBS  at EIVCHT    Q1UBS, ?_qth [General] Idle for 57 seconds
-230118 22:13:18 >Q3GOS     Q7EIV's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
-230118 22:13:18 >Q7EIV     Q3GOS  : Q3GOS *** Joined Chat, Topic General
-230118 22:13:18 >Q7EIV     
-230118 22:13:18 >Q7LWP     Q3GOS  : Q3GOS *** Joined Chat, Topic General
-230118 22:13:18 >Q7LWP     
-230118 22:13:18 >Q1UBS     Q3GOS  : Q3GOS *** Joined Chat, Topic General
-230118 22:13:18 >Q1UBS     
-230118 22:13:18 >Q3GOS     4 Station(s) connected:
-230118 22:13:18 >Q3GOS     Q7EIV  at EIVCHT    Q7EIV, ?_qth [General] Idle for 53 seconds
-230118 22:13:18 >Q3GOS     Q3GOS  at EIVCHT    Q3GOS, ?_qth [General] Idle for 0 seconds
-230118 22:13:18 >Q3GOS     Q7LWP  at EIVCHT    Q7LEP, ?_qth [General] Idle for 5 seconds
-230118 22:13:18 >Q3GOS     Q1UBS  at EIVCHT    Q1UBS, ?_qth [General] Idle for 62 seconds
-230118 22:13:13 ?          topic_join complete user Q7LWP topic General addr 57ff52a0 ref 3
-230118 22:13:18 ?          topic_join complete user Q3GOS topic General addr 57ff52a0 ref 4
-230118 22:13:23 >Q3ZXG     Q7EIV's Chat Server.Type /h for command summary.Bringing up links to other nodes.This may take a minute or two.The /p command shows what nodes are linked.
-230118 22:13:23 >Q7EIV     Q3ZXG  : Q3ZXG *** Joined Chat, Topic General
-230118 22:13:23 >Q7EIV     
-230118 22:13:23 >Q3GOS     Q3ZXG  : Q3ZXG *** Joined Chat, Topic General
-230118 22:13:23 >Q3GOS     
-230118 22:13:23 >Q7LWP     Q3ZXG  : Q3ZXG *** Joined Chat, Topic General
-230118 22:13:23 >Q7LWP     
-230118 22:13:23 >Q1UBS     Q3ZXG  : Q3ZXG *** Joined Chat, Topic General
-230118 22:13:23 >Q1UBS     
-230118 22:13:23 >Q3ZXG     5 Station(s) connected:
-230118 22:13:23 >Q3ZXG     Q7EIV  at EIVCHT    Q7EIV, ?_qth [General] Idle for 58 seconds
-230118 22:13:23 >Q3ZXG     Q3ZXG  at EIVCHT    Q3ZXG, ?_qth [General] Idle for 0 seconds
-230118 22:13:23 >Q3ZXG     Q3GOS  at EIVCHT    Q3GOS, ?_qth [General] Idle for 5 seconds
-230118 22:13:23 >Q3ZXG     Q7LWP  at EIVCHT    Q7LEP, ?_qth [General] Idle for 10 seconds
-230118 22:13:23 >Q3ZXG     Q1UBS  at EIVCHT    Q1UBS, ?_qth [General] Idle for 67 seconds
-230118 22:13:23 ?          topic_join complete user Q3ZXG topic General addr 57ff52a0 ref 5
-230118 22:13:58 <Q7LWP     /N Q7LWP
-230118 22:13:58 >Q7LWP     Name set to Q7LWP
-230118 22:13:58 <Q7LWP     /h
-230118 22:13:58 >Q7LWP     Commands can be in upper or lower case.
-230118 22:13:58 >Q7LWP     /U - Show Users./N - Enter your Name./Q - Enter your QTH./T - Show Topics.
-230118 22:13:58 >Q7LWP     /T Name - Join Topic or Create new Topic. Topic Names are not case sensitive/P - Show Ports and Links.
-230118 22:13:58 >Q7LWP     /A - Toggle Alert on user join - Disabled.
-230118 22:13:58 >Q7LWP     /C - Toggle Colour Mode on or off (only works on Console or BPQTerminal - Disabled.
-230118 22:13:58 >Q7LWP     /Codepage CPnnnn - Set Codepage to use if UTF-8 is disabled.
-230118 22:13:58 >Q7LWP     /E - Toggle Echo - Disabled .
-230118 22:13:58 >Q7LWP     /Keepalive - Toggle sending Keepalive messages every 10 minutes - Disabled.
-230118 22:13:58 >Q7LWP     /ShowNames - Toggle displaying name as well as call on each message - Disabled
-230118 22:13:58 >Q7LWP     /Auto - Toggle Automatic character set selection - Disabled.
-230118 22:13:58 >Q7LWP     /UTF-8 - Character set Selection - UTF-8.
-230118 22:13:58 >Q7LWP     /Time - Toggle displaying timestamp on each message - Disabled.
-230118 22:13:58 >Q7LWP     /S CALL Text - Send Text to that station only.
-230118 22:13:58 >Q7LWP     /F - Force all links to be made./K - Show Known nodes.
-230118 22:13:58 >Q7LWP     /B - Leave Chat and return to node./QUIT - Leave Chat and disconnect from node.
-230118 22:13:58 >Q7LWP     /History nn - Display chat messages received in last nn minutes.
-230118 22:13:58 <Q7LWP     /h
-230118 22:13:58 >Q7LWP     Commands can be in upper or lower case.
-230118 22:13:58 >Q7LWP     /U - Show Users./N - Enter your Name./Q - Enter your QTH./T - Show Topics.
-230118 22:13:58 >Q7LWP     /T Name - Join Topic or Create new Topic. Topic Names are not case sensitive/P - Show Ports and Links.
-230118 22:13:58 >Q7LWP     /A - Toggle Alert on user join - Disabled.
-230118 22:13:58 >Q7LWP     /C - Toggle Colour Mode on or off (only works on Console or BPQTerminal - Disabled.
-230118 22:13:58 >Q7LWP     /Codepage CPnnnn - Set Codepage to use if UTF-8 is disabled.
-230118 22:13:58 >Q7LWP     /E - Toggle Echo - Disabled .
-230118 22:13:58 >Q7LWP     /Keepalive - Toggle sending Keepalive messages every 10 minutes - Disabled.
-230118 22:13:58 >Q7LWP     /ShowNames - Toggle displaying name as well as call on each message - Disabled
-230118 22:13:58 >Q7LWP     /Auto - Toggle Automatic character set selection - Disabled.
-230118 22:13:58 >Q7LWP     /UTF-8 - Character set Selection - UTF-8.
-230118 22:13:58 >Q7LWP     /Time - Toggle displaying timestamp on each message - Disabled.
-230118 22:13:58 >Q7LWP     /S CALL Text - Send Text to that station only.
-230118 22:13:58 >Q7LWP     /F - Force all links to be made./K - Show Known nodes.
-230118 22:13:58 >Q7LWP     /B - Leave Chat and return to node./QUIT - Leave Chat and disconnect from node.
-230118 22:13:58 >Q7LWP     /History nn - Display chat messages received in last nn minutes.
-230118 22:14:04 <Q7EIV     Did it die already?
-230118 22:14:04 >Q3ZXG     Q7EIV  : Did it die already?
-230118 22:14:04 >Q3GOS     Q7EIV  : Did it die already?
-230118 22:14:04 >Q7LWP     Q7EIV  : Did it die already?
-230118 22:14:04 >Q1UBS     Q7EIV  : Did it die already?
-230118 22:14:35 <Q3ZXG     Its pretty fucked
-230118 22:14:35 >Q7EIV     Q3ZXG  : Its pretty fucked
-230118 22:14:35 >Q3GOS     Q3ZXG  : Its pretty fucked
-230118 22:14:35 >Q7LWP     Q3ZXG  : Its pretty fucked
-230118 22:14:35 >Q1UBS     Q3ZXG  : Its pretty fucked
-230118 22:14:39 <Q7LWP     /h
-230118 22:14:39 >Q7LWP     Commands can be in upper or lower case.
-230118 22:14:39 >Q7LWP     /U - Show Users./N - Enter your Name./Q - Enter your QTH./T - Show Topics.
-230118 22:14:39 >Q7LWP     /T Name - Join Topic or Create new Topic. Topic Names are not case sensitive/P - Show Ports and Links.
-230118 22:14:39 >Q7LWP     /A - Toggle Alert on user join - Disabled.
-230118 22:14:39 >Q7LWP     /C - Toggle Colour Mode on or off (only works on Console or BPQTerminal - Disabled.
-230118 22:14:39 >Q7LWP     /Codepage CPnnnn - Set Codepage to use if UTF-8 is disabled.
-230118 22:14:39 >Q7LWP     /E - Toggle Echo - Disabled .
-230118 22:14:39 >Q7LWP     /Keepalive - Toggle sending Keepalive messages every 10 minutes - Disabled.
-230118 22:14:39 >Q7LWP     /ShowNames - Toggle displaying name as well as call on each message - Disabled
-230118 22:14:39 >Q7LWP     /Auto - Toggle Automatic character set selection - Disabled.
-230118 22:14:39 >Q7LWP     /UTF-8 - Character set Selection - UTF-8.
-230118 22:14:39 >Q7LWP     /Time - Toggle displaying timestamp on each message - Disabled.
-230118 22:14:39 >Q7LWP     /S CALL Text - Send Text to that station only.
-230118 22:14:39 >Q7LWP     /F - Force all links to be made./K - Show Known nodes.
-230118 22:14:39 >Q7LWP     /B - Leave Chat and return to node./QUIT - Leave Chat and disconnect from node.
-230118 22:14:39 >Q7LWP     /History nn - Display chat messages received in last nn minutes.
-230118 22:14:39 <Q7EIV     So slow
-230118 22:14:39 >Q3ZXG     Q7EIV  : So slow
-230118 22:14:39 >Q3GOS     Q7EIV  : So slow
-230118 22:14:39 >Q7LWP     Q7EIV  : So slow
-230118 22:14:39 >Q1UBS     Q7EIV  : So slow
-230118 22:15:14 <Q7EIV     1
-230118 22:15:14 >Q3ZXG     Q7EIV  : 1
-230118 22:15:14 >Q3GOS     Q7EIV  : 1
-230118 22:15:14 >Q7LWP     Q7EIV  : 1
-230118 22:15:14 >Q1UBS     Q7EIV  : 1
-230118 22:15:25 <Q7LWP     5
-230118 22:15:25 >Q7EIV     Q7LWP  : 5
-230118 22:15:25 >Q3ZXG     Q7LWP  : 5
-230118 22:15:25 >Q3GOS     Q7LWP  : 5
-230118 22:15:25 >Q1UBS     Q7LWP  : 5
-230118 22:15:59 <Q1UBS     2
-230118 22:15:59 >Q7EIV     Q1UBS  : 2
-230118 22:15:59 >Q3ZXG     Q1UBS  : 2
-230118 22:15:59 >Q3GOS     Q1UBS  : 2
-230118 22:15:59 >Q7LWP     Q1UBS  : 2
-230118 22:16:25 <Q3GOS     3
-230118 22:16:25 >Q7EIV     Q3GOS  : 3
-230118 22:16:25 >Q3ZXG     Q3GOS  : 3
-230118 22:16:25 >Q7LWP     Q3GOS  : 3
-230118 22:16:25 >Q1UBS     Q3GOS  : 3
-230118 22:16:28 <Q7LWP     5
-230118 22:16:28 >Q7EIV     Q7LWP  : 5
-230118 22:16:28 >Q3ZXG     Q7LWP  : 5
-230118 22:16:28 >Q3GOS     Q7LWP  : 5
-230118 22:16:28 >Q1UBS     Q7LWP  : 5
