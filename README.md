@@ -1,6 +1,7 @@
+
 # Virtual Packet Environment
 
-The "Virtual Packet Environment" is a collection of Docker containers and configs that allow you to create a virtualised packet radio environment on a single machine that can consist of multiple [Dire Wolf](https://github.com/wb2osz/direwolf) instances talking to each other over multiple "RF" links, but instead of using physical radios we interconnect the instances using audio loopbacks. This allows you to test various scenarios without needing multiple radios. 
+The "Virtual Packet Environment" is a collection of Docker containers and configs that allow you to create a virtualised packet radio environment on a single machine that can consist of multiple [Dire Wolf](https://github.com/wb2osz/direwolf) instances talking to each other over multiple "RF" links, but instead of using physical radios we interconnect the instances using audio loopbacks. This allows you to test various scenarios without needing multiple radios.
 
 APRS can be emulated using Dire Wolfs native support, and traditional packet radio can be emulated using [BPQ](https://www.cantab.net/users/john.wiseman/Documents/) instances. Additional tools allow you simulate moving stations and see APRS stations on a [Track Direct Map](https://github.com/qvarforth/trackdirect/tree/main/config)
 
@@ -25,11 +26,11 @@ To keep things clean and to make it easier for multiple instances to co-exist on
 
 ## A note on Docker
 
-If you've not used Docker before it can seem complex but generally the hard part is tailoring your applications and build processes to suit it. 
+If you've not used Docker before it can seem complex but generally the hard part is tailoring your applications and build processes to suit it.
 
 Fortunately the hard work is already done here so you should just be able to run `docker compose up -d` to get started.
 
-For more help with starting and stopping containers, see the cheat sheet.
+For more help with starting and stopping containers, and hints on firewalling your machine, see the cheat sheet.
 
 ## Configuring your machine
 
@@ -41,23 +42,23 @@ The following instructions assume you're running a fresh install of Debian 11.
 
 ### Install Docker
 
-Follow [Docker's instructions](https://docs.docker.com/engine/install/debian/) to install it on your machine. 
+Follow [Docker's instructions](https://docs.docker.com/engine/install/debian/) to install it on your machine.
 
 ### Pull this repo
 
-	cd /opt
+        cd /opt
     git clone https://github.com/marrold/virtual-packet-environment.git
     cd virtual-packet-environment
-    
+
 ### Configure the audio devices
 
 First of all we need tell ALSA how many loop backs devices we need:
 
      sudo cat /opt/virtual-packet-environment/alsa-base.conf  >> /etc/modprobe.d/alsa-base.conf
- 
-Then we load the loopback module into the kernel, and make it persistent: 
 
-    sudo modprobe snd-aloop 
+Then we load the loopback module into the kernel, and make it persistent:
+
+    sudo modprobe snd-aloop
     sudo echo snd-aloop >> /etc/modules
 
 Next we configure the various loopbacks and mixers by appending the included `asound.conf` file to `/etc/asound.conf`
@@ -67,7 +68,7 @@ Next we configure the various loopbacks and mixers by appending the included `as
 
 ## Setting Volume Levels
 
-Whilst in my experience Dire Wolf will reliably decode packets without touching the volume settings, it will complain that levels are too high unless you adjust them with `alsamixer`. Unfortunately this process isn't particularly slick. 
+Whilst in my experience Dire Wolf will reliably decode packets without touching the volume settings, it will complain that levels are too high unless you adjust them with `alsamixer`. Unfortunately this process isn't particularly slick.
 
 Firstly, the sound devices won't show up until they've been used at least once. There's a script included that will do this quickly:
 
