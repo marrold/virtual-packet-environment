@@ -1,0 +1,349 @@
+---
+version: "3"
+networks:
+  vpe:
+    ipam:
+      config:
+        - subnet: 10.5.0.0/24
+
+services:
+  Q7EIV-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q7EIV-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8110:8010
+      - 8111:8011
+      - 8180:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.10
+    volumes:
+      - ./Q7EIV/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q7EIV/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q7EIV/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./Q7EIV/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q7EIV/logs:/opt/linbpq/logs
+
+  Q7EIV-dw-east:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q7EIV-dw-east
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.12
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_a zone_b
+      - CALLSIGN=Q7EIV
+
+  kiss-sniff:
+    image: kiss-sniff
+    container_name: kiss-sniff
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.13
+
+  Q1UBS-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q1UBS-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - "2000:110"
+      - "2225:25"
+      - 8210:8010
+      - 8211:8011
+      - 8280:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.20
+    volumes:
+      - /dev/log:/dev/log
+      - ./Q1UBS/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q1UBS/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q1UBS/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./Q1UBS/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q1UBS/logs:/opt/linbpq/logs
+
+  Q1UBS-dw-east:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q1UBS-dw-east
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.22
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_c zone_d
+      - CALLSIGN=Q1UBS
+
+  Q1UBS-dw-west:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q1UBS-dw-west
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.24
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_b zone_a
+      - CALLSIGN=Q1UBS
+
+  Q3GOS-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q3GOS-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8310:8010
+      - 8311:8011
+      - 8380:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.30
+    volumes:
+      - ./Q3GOS/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q3GOS/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q3GOS/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./Q3GOS/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q3GOS/logs:/opt/linbpq/logs
+      - ./Q3GOS/socat.cfg:/opt/linbpq/socat.cfg
+
+  Q3GOS-dw-east:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3GOS-dw-east
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.32
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_e zone_f
+      - CALLSIGN=Q3GOS
+
+  Q3GOS-dw-west:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3GOS-dw-west
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.34
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_d zone_c
+      - CALLSIGN=Q3GOS
+
+  Q3GOS-dw-south:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3GOS-dw-south
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.33
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_g zone_h
+      - CALLSIGN=Q3GOS
+
+  Q7LJK-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q7LJK-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8610:8010
+      - 8611:8011
+      - 8680:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.60
+    volumes:
+      - ./Q7LJK/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q7LJK/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q7LJK/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./Q7LJK/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q7LJK/logs:/opt/linbpq/logs
+
+  Q7LJK-dw-west:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q7LJK-dw-west
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.64
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_f zone_e
+      - CALLSIGN=Q7LJK
+
+  Q3ZXG-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q3ZXG-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8410:8010
+      - 8411:8011
+      - 8480:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.40
+    volumes:
+      - ./Q3ZXG/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q3ZXG/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q3ZXG/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q3ZXG/logs:/opt/linbpq/logs
+
+  Q3ZXG-dw-north:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3ZXG-dw-north
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.41
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_h zone_g
+      - CALLSIGN=Q3GOS
+
+  Q3ZXG-dw-east:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3ZXG-dw-east
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.42
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_i zone_j
+      - CALLSIGN=Q3ZXG
+
+  Q3ZXG-dw-south:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q3ZXG-dw-south
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.43
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_k zone_l
+      - CALLSIGN=Q3ZXG
+
+  Q7LWP-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q7LWP-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8510:8010
+      - 8511:8011
+      - 8580:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.50
+    volumes:
+      - ./Q7LWP/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q7LWP/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q7LWP/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q7LWP/logs:/opt/linbpq/logs
+
+  Q7LWP-dw-west:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q7LWP-dw-west
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.54
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_j zone_i
+      - CALLSIGN=Q7LWP
+
+  Q6XED-bpq:
+    image: marrold/vpe-bpq-x86_64:patch
+    container_name: Q6XED-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8710:8010
+      - 8711:8011
+      - 8780:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.70
+    volumes:
+      - ./Q6XED/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q6XED/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      - ./Q6XED/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q6XED/logs:/opt/linbpq/logs
+
+  Q6XED-dw-north:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q6XED-dw-north
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.71
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_l zone_k
+      - CALLSIGN=Q6XED

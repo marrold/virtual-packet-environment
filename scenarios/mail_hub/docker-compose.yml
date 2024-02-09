@@ -1,0 +1,166 @@
+---
+version: "3"
+networks:
+  vpe:
+    ipam:
+      config:
+        - subnet: 10.5.0.0/24
+
+services:
+
+  GB7CIP-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7CIP-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8110:8010
+      - 8111:8011
+      - 8180:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.10
+    volumes:
+      - ./GB7CIP/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7CIP/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7CIP/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7CIP/logs:/opt/linbpq/logs
+
+  GB7OUK-10-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7OUK-10-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8210:8010
+      - 8211:8011
+      - 8280:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.20
+    volumes:
+      - ./GB7OUK-10/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7OUK-10/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7OUK-10/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7OUK-10/logs:/opt/linbpq/logs
+
+  GB7RAN-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7RAN-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8310:8010
+      - 8311:8011
+      - 8380:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.30
+    volumes:
+      - ./GB7RAN/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7RAN/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7RAN/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7RAN/logs:/opt/linbpq/logs
+
+  GB7OUK-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7OUK-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8410:8010
+      - 8411:8011
+      - 8480:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.40
+    volumes:
+      - ./GB7OUK/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7OUK/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7OUK/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7OUK/logs:/opt/linbpq/logs
+
+
+  GB7RDG-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7RDG-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8510:8010
+      - 8511:8011
+      - 8580:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.50
+    volumes:
+      - ./GB7RDG/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7RDG/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7RDG/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7RDG/logs:/opt/linbpq/logs
+
+  GB7WOD-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: GB7WOD-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8810:8010
+      - 8811:8011
+      - 8880:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.80
+    volumes:
+      - ./GB7WOD/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./GB7WOD/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./GB7WOD/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./GB7WOD/logs:/opt/linbpq/logs
+
+
+  G7BCS-bpq:
+    image: marrold/vpe-bpq-x86_64:mailhub
+    container_name: G7BCS-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8610:8010
+      - 8611:8011
+      - 8680:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.60
+    volumes:
+      - ./G7BCS/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./G7BCS/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./G7BCS/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./G7BCS/logs:/opt/linbpq/logs
+
+  #GB7IOW-bpq:
+  #  image: marrold/vpe-bpq-x86_64:mailhub
+  #  container_name: GB7IOW-bpq
+  #  restart: always
+  #  stop_signal: SIGINT
+  #  stop_grace_period: 2m
+  #  ports:
+  #    - 8710:8010
+  #    - 8711:8011
+  #    - 8780:8080
+  #  networks:
+  #    vpe:
+  #      ipv4_address: 10.5.0.70
+  #  volumes:
+  #    - ./GB7IOW/bpq32.cfg:/opt/linbpq/bpq32.cfg
+  #    - ./GB7IOW/linmail.cfg:/opt/linbpq/linmail.cfg
+  #    - ./GB7IOW/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+  #    - ./GB7IOW/logs:/opt/linbpq/logs
+
+
+

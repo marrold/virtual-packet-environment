@@ -1,0 +1,45 @@
+---
+version: "3"
+networks:
+  vpe:
+    ipam:
+      config:
+        - subnet: 10.5.0.0/24
+
+services:
+  Q7EIV-bpq:
+    image: marrold/vpe-bpq-x86_64:dev
+    container_name: Q7EIV-bpq
+    restart: always
+    stop_signal: SIGINT
+    stop_grace_period: 2m
+    ports:
+      - 8110:8010
+      - 8111:8011
+      - 8180:8080
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.10
+    volumes:
+      - ./Q7EIV/bpq32.cfg:/opt/linbpq/bpq32.cfg
+      - ./Q7EIV/chatconfig.cfg:/opt/linbpq/chatconfig.cfg
+      #- ./Q7EIV/linmail.cfg:/opt/linbpq/linmail.cfg
+      - ./Q7EIV/BPQNODES.dat:/opt/linbpq/BPQNODES.dat
+      - ./Q7EIV/logs:/opt/linbpq/logs
+
+  Q7EIV-dw-east:
+    image: marrold/vpe-direwolf:dev
+    container_name: Q7EIV-dw-east
+    restart: unless-stopped
+    networks:
+      vpe:
+        ipv4_address: 10.5.0.12
+    ipc: host
+    devices:
+      - /dev/snd
+    volumes:
+      - /etc/asound.conf:/etc/asound.conf
+    environment:
+      - ADEVICE=zone_a zone_b
+      - CALLSIGN=Q7EIV
+
